@@ -6,7 +6,7 @@
 
 # 42 ft_transcendence
 
-💙 First web project
+💙 First web group project
 #### Overview
 
 This is a 42 project whose aim is to code a social pong game website.
