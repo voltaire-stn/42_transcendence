@@ -2,19 +2,46 @@
 
 <p align="center">
   <img src="https://github.com/Antoine-lb/transcendence/blob/main/frontend/src/assets/logo.png?raw=true" width="100">
-  <h1 align="center">Transcendance</h1>
 </p>
 
-Online pong game with integrated chat written in NestJS, Vue3 and Socket.io
+# 42 ft_transcendence
 
-## How to run
-1. Clone repo
-2. `docker-compose up --build`, this step may take a while (make sure docker is running on the machine)
-3. Access `localhost` to see the frontend (the backend is accessible through `localhost/api`)
+💙 First web project
+#### Overview
 
-## Links
-- Shematic: https://docs.google.com/drawings/d/1oIKyRnz47QdDII6D6_MJfrURqUz5tdGkDoiW833ctD0/edit
-- [link to project page in intra.42.fr](https://projects.intra.42.fr/projects/ft_transcendance)
+This is a 42 project whose aim is to code a social pong game website.
+#### Introduced concepts
+⭐ Websockets (socket.io)  
+⭐ Repositories (typeorm)  
+⭐ Database interface (pgadmin) 
+ 
+#### Description
+- Write a website that enables users to:
+    - chat with other users
+    - play pong against other users
+    - update username and avatar
+
+#### Restrictions
+- NestJS
+- PostgreSQL
+- JS frontend
+
+#### Usage
+
+Create .env file with personal data, including 42 API key at the root of the project  
+
+    make or docker-compose up --build
+On web browser :  
+
+    127.0.0.1:8080
+#### Authors
+
+- [@adtheus](https://www.github.com/)
+- [@ale-baux](https://github.com/Antoine-lb)
+- [@nbascaul](https://github.com/Nbabas)
+- [@simoulin](https://github.com/lenphatos)
+- [@tsantoni](https://www.github.com/voltaire-stn)
+
 
 
 <img src="https://raw.githubusercontent.com/Antoine-lb/transcendence/7aa3c8f01b4c26d7fc82f4f11551d14442940a68/frontend/src/assets/waves.svg">
