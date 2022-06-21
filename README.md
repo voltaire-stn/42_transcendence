@@ -21,10 +21,10 @@ This is a 42 project whose aim is to code a social pong game website.
     - play pong against other users
     - update username and avatar
 
-#### Restrictions
+#### Techniques
 - NestJS
 - PostgreSQL
-- JS frontend
+- VueJS
 
 #### Usage
 
