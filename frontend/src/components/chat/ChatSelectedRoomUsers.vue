@@ -40,14 +40,12 @@ export default {
         LAMBDA: "lambda",
         MUTED: "muted",
         BANNED: "banned",
-        // AVAILABLE: "available",
-        // FORBIDDEN: "forbidden",
       },
       gameRoomName: null,
     };
   },
   props: {
-    user: Object, // = this.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
     selectedRoom: {
@@ -117,7 +115,6 @@ export default {
         room: this.selectedRoom,
         user: this.user,
       });
-      // this.socket.emit("leaveRoom", this.selectedRoom);
     },
   },
   async created() {
@@ -195,10 +192,6 @@ export default {
         👋 quit room
       </button>
       <div class="bold-red"> You can't leave room if you are muted or the last person in it </div>
-
-      <!-- <code>
-        <pre>{{ this.usersForRoom }}</pre>
-      </code> -->
     </div>
   </div>
 </template>
@@ -206,7 +199,7 @@ export default {
 <style scoped>
 main {
   max-width: 500px;
-  padding-top: 50px; /* Original 100px */
+  padding-top: 50px;
   margin: auto;
 }
 
@@ -255,11 +248,9 @@ input[type="submit"]:hover {
 }
 
 .table-title {
-  /* color: #703ab8; */
   font-weight: bold;
   font-size: 18px;
   text-transform: capitalize;
-  /* margin-bottom: 5px; */
 }
 
 .table-body {
@@ -268,7 +259,6 @@ input[type="submit"]:hover {
 }
 
 .users-list {
-  /* margin: 10px; */
 }
 
 .bold-red {
@@ -294,7 +284,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
   display: inline-block;
@@ -306,7 +295,6 @@ input[type="submit"]:hover {
   background-color: white;
   border: none;
   color: rgba(0, 0, 0, 0.7);
-  /* font-weight: bold; */
   font-size: 20px;
   box-shadow: none;
   border-radius: 3px;
@@ -334,7 +322,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }
@@ -453,12 +440,9 @@ textarea {
   font-weight: bold;
   font-size: 20px;
   box-shadow: 0 3px 6px rgba(221, 7, 7, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  /* padding: 6px 6px; */
   height: 40px;
-  /* width: 45px; */
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  /* display: block; */
   margin: 10px;
   padding: 10px;
   border: 4px solid #dc2626;

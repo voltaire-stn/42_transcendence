@@ -51,14 +51,10 @@ export default {
       userRoomsRoles: [], // roles in all rooms for current user
       selectedRoom: null,
       userRolesInRoom: [], // all roles in current room
-      usersForRoom: [], // all users for current room (even AVAILABLE BANNED or FORBIDDEN)
+      usersForRoom: [], // all users for current room
       blockedFriends: [],
     };
   },
-  // setup() {
-  //   const userStore = useUserStore();
-  //   return { userStore };
-  // },
   props: {
     user: Object,
     socket: Object,
@@ -106,11 +102,6 @@ export default {
     },
   },
   async created() {
-    // this.socket = io("http://127.0.0.1:3000", {
-    //   extraHeaders: {
-    //     Authorization: this.user.access_token,
-    //   },
-    // });
     this.socket.on("getRoomsForUser", (rooms: RoomI[]) => {
       this.userRooms = rooms;
       this.socket.emit("getAllRolesForUser", this.user);
@@ -224,15 +215,8 @@ export default {
 
 .chat-side {
   width: 50%;
-  /* background-color: rgba(120, 61, 204, 0.2); */
-  /* backdrop-filter: blur(5px); */
-  /* border-radius: 50px; */
   border-right: 2px solid #713ab8a8;
   padding: 10px;
-  /* box-shadow: 0 0 6px rgba(213, 183, 255, 0.2),
-    0 0 30px rgba(219, 202, 243, 0.34), 0 0 12px rgba(211, 193, 236, 0.52),
-    0 0 21px rgba(211, 193, 236, 0.92), 0 0 34px rgba(211, 193, 236, 0.78),
-    0 0 54px rgba(211, 193, 236, 0.92); */
 }
 
 .main-chat {
@@ -254,8 +238,7 @@ export default {
   }
 }
 main {
-  /* max-width: 500px; */
-  padding-top: 50px; /* Original 100px */
+  padding-top: 50px;
   margin: auto;
 }
 
@@ -305,7 +288,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
   display: inline-block;
@@ -324,7 +306,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }

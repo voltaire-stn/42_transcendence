@@ -37,16 +37,13 @@ export default {
   name: "ChatSelectedRoomParams",
   data() {
     return {
-      // Modification
       showModifyPassword: false,
-      // Addition
       showAddPassword: false,
-      // room renaming
       newName : "",
     };
   },
   props: {
-    user: Object, // = this.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
     selectedRoom: {
@@ -181,8 +178,7 @@ export default {
 <style scoped>
 main {
   max-width: 500px;
-  padding-top: 50px; /* Original 100px */
-  /* margin: auto; */
+  padding-top: 50px;
 }
 
 input {
@@ -200,17 +196,13 @@ input[type="submit"]:hover {
 }
 
 .box {
-  /* background-color: white; */
   border: none;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.23);
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
   border-radius: 3px;
-  /* padding: 15px; */
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
   margin: 10px;
-  /* border: 2px solid #703ab8; */
 }
 
 .error-paragraf {
@@ -277,7 +269,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
   display: inline-block;
@@ -296,7 +287,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }

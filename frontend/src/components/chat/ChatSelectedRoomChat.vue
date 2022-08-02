@@ -39,7 +39,7 @@ export default {
     };
   },
   props: {
-    user: Object, // = this.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
     selectedRoom: {
@@ -54,7 +54,7 @@ export default {
       return this.userRoomsRoles[this.selectedRoom.id];
     },
     sendMessage() {
-      if (this.text == "\n") // TO CHECK IF OTHER EMPTY MESSAGES
+      if (this.text == "\n")
       {
         this.$emit("notifyWarn", "Empty message.");
         this.text = "";
@@ -84,9 +84,6 @@ export default {
     },
   },
   async created() {
-    // this.socket.on("updateSelected", (room) => {
-    //   this.$emit("updateSelected", room);
-    // });
     this.socket.on("messageAdded", (message) => {
       if (this.messages && this.messages.items)
         this.messages.items.push(message);
@@ -158,7 +155,7 @@ export default {
 
 main {
   max-width: 500px;
-  padding-top: 50px; /* Original 100px */
+  padding-top: 50px;
   margin: auto;
 }
 
@@ -169,16 +166,13 @@ input[type="submit"]:hover {
 
 .box {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.23);
-  /* background-color: white; */
   border: none;
   font-weight: bold;
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
   border-radius: 3px;
   padding: 15px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
   margin: 10px;
-  /* border: 2px solid #703ab8; */
 }
 
 .error-paragraf {
@@ -222,7 +216,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
   display: inline-block;
@@ -241,7 +234,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }
@@ -305,7 +297,7 @@ input[type="submit"]:hover {
   text-shadow: 0 0 6px rgba(120, 61, 204, 0.92),
     0 0 30px rgba(94, 14, 206, 0.34), 0 0 12px rgba(211, 193, 236, 0.52),
     0 0 21px rgba(211, 193, 236, 0.92), 0 0 34px rgba(211, 193, 236, 0.78),
-    0 0 54px rgba(211, 193, 236, 0.92); /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+    0 0 54px rgba(211, 193, 236, 0.92);
 }
 
 .on-colors {
@@ -371,6 +363,5 @@ textarea {
   padding: 10px;
   border-radius: 13px;
   margin-left: 5px;
-  /* margin-bottom: 100px; */
 }
 </style>

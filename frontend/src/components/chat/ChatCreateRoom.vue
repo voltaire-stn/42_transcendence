@@ -6,7 +6,7 @@ export interface newRoomInterface {
   users: [{ id: number }];
   status: boolean;
   protected: boolean;
-  password: string; // TODO : crypt it
+  password: string;
 }
 
 function fetchWithHeaders(url) {
@@ -218,7 +218,6 @@ input {
 }
 
 .box {
-  /* background-color: white; */
   border: none;
   font-weight: bold;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -227,7 +226,6 @@ input {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
   margin: 10px;
-  /* border: 2px solid #703ab8; */
 }
 
 .new-room-button {
@@ -281,9 +279,7 @@ input {
 }
 /* POUR LES SALONS */
 .list-group-item {
-  /* display: block; */ /* remove dot */
   text-decoration: none;
-  /* margin: 1em 0.2em; */
   color: #4a4a4a;
 }
 
@@ -312,7 +308,6 @@ input {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }

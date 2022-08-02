@@ -33,7 +33,7 @@ export default {
     };
   },
   props: {
-    user: Object, // = this.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
     selectedRoom: {
@@ -75,7 +75,6 @@ export default {
       });
       this.socket.on("init", this.handleInit);
       this.socket.on("invit", this.invitationRecu);
-      // this.socket.on("joinGame", this.handleJoinGame);
       this.socket.on("gameState", this.handleGameState);
       this.socket.on("gameOver", this.handleGameOver);
       this.socket.on("unknownCode", this.handleUnknownCode);
@@ -91,7 +90,6 @@ export default {
       this.socket.on("samePlayer", (arg1, callback) => {
         callback({
           status: alert("test"),
-          // status1: "ok"
         });
       });
 
@@ -130,8 +128,6 @@ export default {
     },
 
     handleSpecGame(code) {
-      // const code = this.gameCodeSpec.value;
-
       this.socket.emit("spec", code);
       this.init();
     },
@@ -150,23 +146,17 @@ export default {
 
     keydown(e) {
       if (this.gameStatus != "playing" && this.gameStatus != "pause") {
-        // this.reset();
         return;
       }
       if (!this.socket.connected) return;
-      // e.preventDefault();
-      // e.stopPropagation();
       this.socket.emit("keydown", e.keyCode);
     },
 
     keyup(e) {
       if (this.gameStatus != "playing" && this.gameStatus != "pause") {
-        // this.reset();
         return;
       }
       if (!this.socket.connected) return;
-      // e.preventDefault();
-      // e.stopPropagation();
       this.socket.emit("keyup", e.keyCode);
     },
 
@@ -176,7 +166,6 @@ export default {
 
     paintGame(state) {
       if (this.gameStatus != "playing" && this.gameStatus != "pause") {
-        // this.reset();
         return;
       }
       if (!this.canvas) return;

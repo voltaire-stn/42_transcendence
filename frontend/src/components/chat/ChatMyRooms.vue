@@ -48,7 +48,7 @@ export default {
   },
   props: {
     socket: Object,
-    user: Object, // = userStore.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
     selectedRoom: {
@@ -202,8 +202,6 @@ input[type="submit"]:hover {
 }
 
 .table-title {
-  /* color: #703ab8; */
-  /* font-weight: bold; */
   font-size: 18px;
   text-transform: capitalize;
   margin-bottom: 5px;
@@ -216,7 +214,6 @@ input[type="submit"]:hover {
 }
 
 .users-list {
-  /* margin: 30px; */
 }
 
 .bold-red {
@@ -242,7 +239,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }

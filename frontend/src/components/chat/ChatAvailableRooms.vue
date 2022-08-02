@@ -39,7 +39,7 @@ export default {
   },
   props: {
     socket: Object,
-    user: Object, // = userStore.user
+    user: Object,
     userRooms: Object,
     userRoomsRoles: Object,
   },
@@ -97,7 +97,7 @@ export default {
 <style scoped>
 main {
   max-width: 500px;
-  padding-top: 50px; /* Original 100px */
+  padding-top: 50px;
   margin: auto;
 }
 
@@ -177,7 +177,6 @@ input[type="submit"]:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-top: 10px;
-  /* display: block; */
   margin: 10px;
   border: 2px solid #703ab8;
 }
